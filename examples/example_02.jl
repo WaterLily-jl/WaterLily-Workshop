@@ -32,7 +32,6 @@ end
 # sim and sim gif
 
 # 3D example
-@assert CUDA.functional()
 sim = ;
 
 # make the writer

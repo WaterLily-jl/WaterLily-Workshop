@@ -34,7 +34,6 @@ function make_sim(;L=32,N::Int=3,R=2,Re=1e3,λ=1.4,m=6,n=4,T=Float32,mem=Array)
     Simulation((m*R*L,n*R*L),(U,0f0),L;U=1,ν=L/Re,body,T,mem)
 end
 
-@assert CUDA.functional()
 sim = make_sim(N=3,L=32,R=3,mem=CUDA.CuArray);
 # sim = make_sim(N=3,L=32,R=3);
 
@@ -50,7 +49,7 @@ bod = similar(sim.flow.σ) |> Array
     # update until time tᵢ in the background
     sim_step!(sim,tᵢ,remeasure=true)
 
-    forces = 2WaterLily.∮nds(sim.flow.p,sim.flow.f,sim.body,tᵢ)/sim.L
+    forces = 2WaterLily.pressure_force(sim)/sim.L
     
     # print time step
     println("tU/L=",round(tᵢ,digits=4),", Δt=",round(sim.flow.Δt[end],digits=3))

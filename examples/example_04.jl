@@ -29,6 +29,5 @@ function make_sim(;L=32,N::Int=3,R=2,Re=1e3,λ=2,m=6,n=4,T=Float32,mem=Array)
 end 
 
 # check cuda and make sim
-@asset CUDA.functional()
 sim = ;
 

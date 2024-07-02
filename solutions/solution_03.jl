@@ -28,8 +28,6 @@ function make_sim(;L=32,Re=1e3,m=10,n=6,T=Float32,mem=Array)
     Simulation((m*L,n*L),(U,0f0),L;U=1,ν=L/Re,body,T,mem)
 end
 
-
-@assert CUDA.functional()
 sim = make_sim(L=32;mem=CUDA.CuArray);
 
 # intialize

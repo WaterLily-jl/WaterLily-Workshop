@@ -47,11 +47,10 @@ function make_sim3D(;R=2^6, a=1, U=1, Re=1e3, mem=Array,T=Float32)
 end
 
 # 2D sim on the CPU
-sim = make_sim2D();
-sim_gif!(sim,duration=6.0,clims=(-5,5),plotbody=true,remeasure=true)
+# sim = make_sim2D();
+# sim_gif!(sim,duration=6.0,clims=(-5,5),plotbody=true,remeasure=true)
 
 # 3D sim on the GPU
-@assert CUDA.functional()
 sim = make_sim3D(mem=CUDA.CuArray);
 
 # make a writer with some attributes

@@ -30,6 +30,5 @@ function make_sim(;L=32,λ=1.4,R=3,Re=1e3,m=10,n=6,T=Float32,mem=Array)
 end 
 
 # check cuda and make sim
-@assert CUDA.functional()
 sim = ;
 
