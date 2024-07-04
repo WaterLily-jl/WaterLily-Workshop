@@ -2,7 +2,7 @@ using WaterLily
 using StaticArrays
 using ParametricBodies
 using CUDA
-include("../TwoD_plots.jl")
+include("../utils/TwoD_plots.jl")
 
 function make_sim(;L=32,Re=1e3,m=10,n=6,T=Float32,mem=Array)
     # Inflow and angle of attack

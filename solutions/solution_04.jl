@@ -2,7 +2,7 @@ using WaterLily
 using StaticArrays
 using ParametricBodies
 using CUDA
-include("../TwoD_plots.jl")
+include("../utils/TwoD_plots.jl")
 
 function make_sim(;L=32,N::Int=3,R=2,Re=1e3,λ=2,m=6,n=4,T=Float32,mem=Array)
     # Inflow, Rotation rate, and blade section half-angle

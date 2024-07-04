@@ -1,5 +1,5 @@
 using WaterLily
-include("../TwoD_plots.jl")
+include("../utils/TwoD_plots.jl")
 
 function circle(m,n;Re=250,U=1)
     # some dimensions

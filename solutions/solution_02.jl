@@ -1,7 +1,7 @@
 using WaterLily
 using StaticArrays
 using CUDA
-include("../TwoD_plots.jl")
+include("../utils/TwoD_plots.jl")
 
 # utility functions
 norm(x::StaticArray) = √(x'*x)

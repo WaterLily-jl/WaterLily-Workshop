@@ -35,7 +35,7 @@ my_func(...) and my_func!(...) # are not the same!
 # end
 
 using WaterLily
-include("../TwoD_plots.jl")
+include("../utils/TwoD_plots.jl")
 
 m,n = 2^8,2^8
 Re=250
