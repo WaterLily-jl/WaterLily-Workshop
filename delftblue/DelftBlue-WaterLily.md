@@ -41,7 +41,7 @@ and then refresh your environment with `source ~/.bash_profile`.
 Clone the WaterLily.jl repository (or yours if you have forked it):
 
 ```bash
-git clone https://github.com/weymouth/WaterLily.jl.git
+git clone git@github.com:WaterLily-jl/WaterLily.jl.git
 ```
 
 change to the `WaterLily.jl` directory and start `Julia`:
